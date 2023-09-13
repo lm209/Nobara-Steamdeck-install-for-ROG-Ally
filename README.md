@@ -105,4 +105,5 @@ Once rebooted and back into Desktop you will see ROG app, open it click allow fa
 For the time being after you reboot your device you will have to reopen the app to turn on the fan control curve again. hopefully this will be fixed soon to auto apply in steam OS.
 
 ########################################
+To keep your system upto date use sudo pacman -Syy and then sudo pacman -Syu
 Thats it Welcome to Steam OS!!!!!!!!!
