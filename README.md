@@ -102,8 +102,13 @@ pikaur -S paru-git
  
 sudo reboot
 Once rebooted and back into Desktop you will see ROG app, open it click allow fan curve box then adjust them to your liking save/apply profile. and minimise app dont close it!
-For the time being after you reboot your device you will have to reopen the app to turn on the fan control curve again. hopefully this will be fixed soon to auto apply in steam OS.
+******UPDATE******
+After you install asusctl enter this..
+
+sudo systemctl start asusd
+
+This should start the service everytine you start up 
 
 ########################################
-To keep your system upto date use sudo pacman -Syy and then sudo pacman -Syu
+To keep your system upto date use ateam overlay/settings/ check for update this will update both steam and chimeraOS
 Thats it Welcome to Steam OS!!!!!!!!!
