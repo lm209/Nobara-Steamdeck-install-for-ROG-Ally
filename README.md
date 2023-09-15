@@ -1,4 +1,4 @@
-# CimeraOS-Rog-Ally-Install
+# ChimeraOS-Rog-Ally-Install
 Detailed description on how to install Steam like OS on your Ally !!!
 ChimeraOS Asus Rog Ally Setting Up
 
