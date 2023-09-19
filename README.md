@@ -38,17 +38,25 @@ Follow next step to enable fan controls and tdp to 43 watt
 
 Now go to the Desktop mode and Open the Console Application.
 
-If you are asked for a password the default password is gamer
+If you are asked for a password the default password is gamer.
 
 #####################################################
-The first step is to download auto install.sh this will go to your download folder, also download the steam patch 
-If you dont have the build from above run the install script by right click run.
-if you are prompted for password it is gamer, if prompted for accept say yes.
-This will install latests kernal and also all the things you will need, 43 watt tdp and asus fan control, this will be on your desktop.
-your device will force restart at the end of the process. 
-Cryoutils will be there also , open it password again is gamer. run recommened settings and close.
-#########################################################
-Please note this is not supported by the offical Chimera team and is custom patches i am only trying to help users have a better handheld experiance, i only did the script the patches etc are someone else work!
+If you are not on the latest kernal download and run the auto update.sh (right click and run)
 
+#####################################################
+The first step is to download auto install.sh this will go to your download folder, also download the steam patch.
+
+If you are prompted for password it is gamer, if prompted to accept say yes.
+This will install all the things you will need, 43 watt tdp and asus fan control, this will be on your desktop.
+##########################################
+Your device will force restart at the end of the process. 
+##########################################
+
+Cryoutils will be there also, open it, password again is gamer. run recommened settings and close.
+#########################################################
+
+Please note this is not supported by the offical Chimera team and is custom patches i am only trying to help users have a better handheld experiance, i only did the script the patches etc are someone else work!
+#######################################
+Enjoy!There are still bugs but a restart will fix them!
 
 
