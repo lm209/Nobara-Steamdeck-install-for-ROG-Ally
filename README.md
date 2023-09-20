@@ -29,6 +29,7 @@ Connect to Wifi or Ethernet in the Setup
 Select the SSD to install ChimeraOS
 
 Select the "Advanced User Installation" and Install the "Unstable Build
+Alternitivly if you have Chimera already installed downlaod the auto update file here and run it to get latest build.
 
 Dont worry your buttons wont work at this stage. use the touch screen to go into Power then switch to desktop. 
 The screen will look tiny, go to settings at the top and then Display change scaling to 200%
@@ -36,7 +37,7 @@ Follow next step to enable fan controls and tdp to 43 watt
 
 ##################################################
 
-Now go to the Desktop mode and Open the Console Application.
+Now go to the Desktop mode and Open the Terminal Application.
 
 If you are asked for a password the default password is gamer.
 
@@ -44,15 +45,54 @@ If you are asked for a password the default password is gamer.
 If you are not on the latest kernal download and run the auto update.sh (right click and run)
 
 #####################################################
-The first step is to download auto install.sh this will go to your download folder, also download the steam patch.
+The first step is to download steam-patch file from here, this will go to your download folder.
+Open terminal and enter this
 
-If you are prompted for password it is gamer, if prompted to accept say yes.
-This will install all the things you will need, 43 watt tdp and asus fan control, this will be on your desktop.
-##########################################
-Your device will force restart at the end of the process. 
-##########################################
+systemctl stop handycon
 
-Cryoutils will be there also, open it, password again is gamer. run recommened settings and close.
+Then copy and paste this 
+
+curl -L https://github.com/Maclay74/steam-patch/releases/latest/download/install.sh | sh
+
+Now this do one command line at a time!
+#################################################################
+sudo su     
+cp -f /home/gamer/Downloads/steam-patch /home/gamer/steam-patch
+systemctl daemon-reload
+systemctl enable steam-patch.service
+systemctl start steam-patch.service
+##################################################################
+You should now have 43watt tpd control in steam gamemode overlay under power options.
+##########################################
+Next on list is Cryoutilities and deckyloader here- 
+
+curl -L https://github.com/SteamDeckHomebrew/decky-loader/raw/main/dist/install_release.sh | sh
+curl https://raw.githubusercontent.com/CryoByte33/steam-deck-utilities/main/install.sh | bash -s --
+
+Start Cryoutilities and change all to Recommended, reboot now
+
+##########################################
+Now fan controls-
+
+Adding Fan Curve Setting with Console:
+
+sudo pacman -S base-devel
+
+pikaur -S rog-control-center
+
+Open Rog Control Center
+
+Setting up your Curve Profiles and save it in the GUI
+
+sudo systemctl start asusd
+
+sudo reboot
+
+If you Update rog-control-center then Type this:
+
+systemctl daemon-reload
+
+systemctl restart asusd
 #########################################################
 
 Please note this is not supported by the offical Chimera team and is custom patches i am only trying to help users have a better handheld experiance, i only did the script the patches etc are someone else work!
