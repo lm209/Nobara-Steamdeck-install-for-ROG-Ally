@@ -45,6 +45,7 @@ If you are asked for a password the default password is gamer.
 If you are not on the latest kernal download and run the auto update.sh (right click and run)
 
 #####################################################
+CLICK THE RAW FILE TO THE RIGHT OF HERE TO SEE THE COMMANDS AND COPY TO YOUR TERMINAL WINDOW DO NOT COPY AND PASTE FROM HERE 
 The first step is to download steam-patch file from here, this will go to your download folder.
 Open terminal and enter this
 
