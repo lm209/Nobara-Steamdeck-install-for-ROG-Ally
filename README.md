@@ -21,16 +21,11 @@ git clone https://github.com/ShadowBlip/HandyGCCS.git
 
 cd HandyGCCS
 
-open terminal in folder then
-
 sudo python -m pip install build wheel installer
-
 
 sudo ./build.sh in HandyGCCS folder
 
-
 sudo ln -s /usr/local/bin/handycon /usr/bin/handycon
-
 
 sudo systemctl start handycon
 
