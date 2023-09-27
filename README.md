@@ -1,3 +1,4 @@
+1.
 
 Please follow this guide to install Nobara steamdeck version on the ROG Ally.
 
@@ -12,8 +13,9 @@ Tou can chose to dual boot during the install. choose the no swap option.
 
 Once installed and updated do the following to enable Handy con and asusctl for fans and power profile options.
 
-steps to enable handycon
 ______________________________________________________________________________________
+
+2.
 
 git clone https://github.com/ShadowBlip/HandyGCCS.git
 
@@ -40,7 +42,7 @@ sudo reboot
 
 ___________________________________________________________________________________________________
 
-Next is Asusctl follow everything as described 
+3.
  
 Open Nobara Package Manager
 
@@ -57,13 +59,15 @@ sudo systemctl status asusd
 sudo reboot
 __________________________________________________________________________________________________
 
+4.
+
 Now we will disable Zram as its not the best for a 16GB handheld! and enable swapfile 16gb
 
 sudo touch /etc/systemd/zram-generator.conf
 
 sudo dnf remove zram-generator-defaults
 
-reboot 
+sudo reboot 
 
 sudo dd if=/dev/zero of=/swapfile bs=1G count=16
 
@@ -79,27 +83,24 @@ sudo mkswap /swapfile
 
 sudo swapon /swapfile
 
-
 now enter sudo nano /etc/fstab 
-
-if there is a line that contains anything with swap in it delete the whole line then,
 
 Add this to the end of the lines thats there,
 
 /swapfile swap swap defaults 0 0
 
-Reboot
+sudo reboot
 ______________________________________________________________________________________
+
+5.
 
 Download Deckyloader from here 
 
 curl -L https://github.com/SteamDeckHomebrew/decky-loader/raw/main/dist/install_release.sh | sh
 
-
 Cryoutilites from here 
 
 curl https://raw.githubusercontent.com/CryoByte33/steam-deck-utilities/main/install.sh | bash -s --
-
 
 Start Cryoutilities and change all to Recommended, password is gamer as default or what ever you chose. reboot now
 
