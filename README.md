@@ -1,103 +1,109 @@
-# ChimeraOS-Rog-Ally-Install
-Detailed description on how to install Steam like OS on your Ally !!!
-ChimeraOS Asus Rog Ally Setting Up
 
-ITS RECOMMENDED TO HAVE THE BIOS AND MCU FIRMWARE UP TO DATE! PLEASE UPDATE BEFORE, OVER MYASUS OR THE OFFICIAL DRIVER & SUPPORT SITE!
+Please follow this guide to install Nobara steamdeck version on the ROG Ally.
 
-Note: This operating system is still under development. There could be errors and missing components. However, the operating system is in a stable state
+There has been alot of work done on this by none other than Glorious Eggroll the man of GEProton fame.
 
-#####################################################
+Download https://www.balena.io/etcher/ to burn the Nobara image to USB.
 
-Download the Windows Media Creation Tool and create a bootable USB Drive: https://www.microsoft.com/de-de/software-download/windows11 (not needed if you Download my Release)
+https://nobaraproject.org/download-nobara/# down load Nobara for steam deck
 
-Boot it up, Format and delete all Partitions
+Tou can chose to dual boot during the install. choose the no swap option.
 
-Leave the Partition to unallocated
 
-Make a force Shutdown (hold the power button until it shutdown)
+Once installed and updated do the following to enable Handy con and asusctl for fans and power profile options.
 
-Go to the bios and "Disable Secure Boot under "Boot" Options.
+steps to enable handycon
+______________________________________________________________________________________
 
-Download this Build here: https://github.com/kzkzkzkzkzk/install-media/releases/tag/2023-09-05_81a7337 (not needed if you Download my Release)
+git clone https://github.com/ShadowBlip/HandyGCCS.git
+cd HandyGCCS
 
-Download Etcher and make a bootable USB Drive: https://etcher.balena.io/ (not needed if you Download my Release)
+open terminal in folder then
 
-Boot it up
+sudo python -m pip install build wheel installer
 
-Connect to Wifi or Ethernet in the Setup
 
-Select the SSD to install ChimeraOS
+sudo ./build.sh in HandyGCCS folder
 
-Select the "Advanced User Installation" and Install the "Unstable Build
-Alternitivly if you have Chimera already installed downlaod the auto update file here and run it to get latest build.
 
-Dont worry your buttons wont work at this stage. use the touch screen to go into Power then switch to desktop. 
-The screen will look tiny, go to settings at the top and then Display change scaling to 200%
-Follow next step to enable fan controls and tdp to 43 watt
+sudo ln -s /usr/local/bin/handycon /usr/bin/handycon
 
-##################################################
 
-Now go to the Desktop mode and Open the Terminal Application.
+sudo systemctl start handycon
 
-If you are asked for a password the default password is gamer.
+sudo systemctl enable handycon
 
-#####################################################
-If you are not on the latest kernal download and run the auto update.sh (right click and run)
+sudo systemctl status handycon
 
-#####################################################
-CLICK THE RAW FILE TO THE RIGHT OF HERE TO SEE THE COMMANDS AND COPY TO YOUR TERMINAL WINDOW DO NOT COPY AND PASTE FROM HERE 
-The first step is to download steam-patch file from here, this will go to your download folder.
-Open terminal and enter this
+Handycon is now fully working 
 
-systemctl stop handycon
+___________________________________________________________________________________________________
 
-Then copy and paste this 
+Next is Asusctl follow everything as described 
+ 
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-curl -L https://github.com/Maclay74/steam-patch/releases/latest/download/install.sh | sh
+sudo dnf install rust
 
-Now this do one command line at a time!
-#################################################################
-sudo su     
-cp -f /home/gamer/Downloads/steam-patch /home/gamer/steam-patch
-systemctl daemon-reload
-systemctl enable steam-patch.service
-systemctl start steam-patch.service
-##################################################################
-You should now have 43watt tpd control in steam gamemode overlay under power options.
-##########################################
-Next on list is Cryoutilities and deckyloader here- 
+
+ git clone https://github.com/flukejones/asusctl.git
+
+
+
+open terminal inside downloaded folder then
+
+sudo dnf install cmake clang-devel systemd-devel glib2-devel cairo-devel atkmm-devel pangomm-devel gdk-pixbuf2-devel gtk3-devel libappindicator-gtk3
+make
+sudo make install
+
+__________________________________________________________________________________________________
+
+Now we will disable Zram as its not the best for a 16GB handheld! and enable swapfile 16gb
+
+sudo dnf remove zram-generator-defaults
+
+reboot 
+
+sudo truncate -s 0 /swapfile
+sudo chattr +C /swapfile
+sudo dd if=/dev/zero of=/swapfile bs=1G count=16
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+
+now enter sudo nano /etc/fstab 
+
+if there is a line that contains anything with swap in it delete the whole line then,
+
+Add this to the end of the lines thats there,
+
+/swapfile swap swap defaults 0 0
+
+Reboot
+
+Download Deckyloader from here 
 
 curl -L https://github.com/SteamDeckHomebrew/decky-loader/raw/main/dist/install_release.sh | sh
+
+Cryoutilites from here 
+
 curl https://raw.githubusercontent.com/CryoByte33/steam-deck-utilities/main/install.sh | bash -s --
 
 Start Cryoutilities and change all to Recommended, reboot now
 
-##########################################
-Now fan controls-
+Enjoy your new steamdeck aka ROG ALLY!!!!
 
-Adding Fan Curve Setting with Console:
+If you and ROG control as non steam game you can open in gamemaode and change your power preference 
 
-sudo pacman -S base-devel
+optional install power tools in decky then go here and follow the instarutions for power control and tdp options 
 
-pikaur -S rog-control-center
+https://github.com/hicder/PowerTools/releases/tag/v2.1
 
-Open Rog Control Center
 
-Setting up your Curve Profiles and save it in the GUI
 
-sudo systemctl start asusd
 
-sudo reboot
 
-If you Update rog-control-center then Type this:
 
-systemctl daemon-reload
 
-systemctl restart asusd
-#########################################################
-
-Please note this is not supported by the offical Chimera team and is custom patches i am only trying to help users have a better handheld experiance, i only did the script the patches etc are someone else work!
-#######################################
-Enjoy!There are still bugs but a restart will fix them!
 
 
