@@ -95,7 +95,7 @@ Cryoutilites from here
 
 curl https://raw.githubusercontent.com/CryoByte33/steam-deck-utilities/main/install.sh | bash -s --
 
-Start Cryoutilities and change all to Recommended, reboot now
+Start Cryoutilities and change all to Recommended, password is gamer as default or what ever you chose. reboot now
 
 Enjoy your new steamdeck aka ROG ALLY!!!!
 
