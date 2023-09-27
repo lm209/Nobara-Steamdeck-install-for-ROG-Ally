@@ -16,18 +16,16 @@ steps to enable handycon
 ______________________________________________________________________________________
 
 git clone https://github.com/ShadowBlip/HandyGCCS.git
+
 cd HandyGCCS
 
 open terminal in folder then
 
 sudo python -m pip install build wheel installer
 
-
 sudo ./build.sh in HandyGCCS folder
 
-
 sudo ln -s /usr/local/bin/handycon /usr/bin/handycon
-
 
 sudo systemctl start handycon
 
@@ -35,27 +33,27 @@ sudo systemctl enable handycon
 
 sudo systemctl status handycon
 
+sudo reboot
+
 Handycon is now fully working 
 
 ___________________________________________________________________________________________________
 
 Next is Asusctl follow everything as described 
  
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+Open the Nobara Package Manager
 
-sudo dnf install rust
+Select "asusctl" and "asusctl-rog-gui" and click Apply
 
+Open Console and Type:
 
- git clone https://github.com/flukejones/asusctl.git
+sudo systemctl start asusd
 
+sudo systemctl enable asusd
 
+sudo systemctl status asusd
 
-open terminal inside downloaded folder then
-
-sudo dnf install cmake clang-devel systemd-devel glib2-devel cairo-devel atkmm-devel pangomm-devel gdk-pixbuf2-devel gtk3-devel libappindicator-gtk3
-make
-
-sudo make install
+sudo reboot
 
 __________________________________________________________________________________________________
 
