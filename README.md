@@ -61,6 +61,8 @@ ________________________________________________________________________________
 
 Now we will disable Zram as its not the best for a 16GB handheld! and enable swapfile 16gb
 
+sudo touch /etc/systemd/zram-generator.conf
+
 sudo dnf remove zram-generator-defaults
 
 reboot 
