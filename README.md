@@ -65,11 +65,17 @@ sudo dnf remove zram-generator-defaults
 reboot 
 
 sudo truncate -s 0 /swapfile
+
 sudo chattr +C /swapfile
+
 sudo dd if=/dev/zero of=/swapfile bs=1G count=16
+
 sudo chmod 600 /swapfile
+
 sudo mkswap /swapfile
+
 sudo swapon /swapfile
+
 
 now enter sudo nano /etc/fstab 
 
