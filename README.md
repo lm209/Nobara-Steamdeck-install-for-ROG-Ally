@@ -16,6 +16,7 @@ steps to enable handycon
 ______________________________________________________________________________________
 
 git clone https://github.com/ShadowBlip/HandyGCCS.git
+
 cd HandyGCCS
 
 open terminal in folder then
