@@ -86,14 +86,17 @@ Add this to the end of the lines thats there,
 /swapfile swap swap defaults 0 0
 
 Reboot
+______________________________________________________________________________________
 
 Download Deckyloader from here 
 
 curl -L https://github.com/SteamDeckHomebrew/decky-loader/raw/main/dist/install_release.sh | sh
 
+
 Cryoutilites from here 
 
 curl https://raw.githubusercontent.com/CryoByte33/steam-deck-utilities/main/install.sh | bash -s --
+
 
 Start Cryoutilities and change all to Recommended, password is gamer as default or what ever you chose. reboot now
 
