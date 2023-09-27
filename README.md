@@ -36,28 +36,25 @@ sudo systemctl enable handycon
 
 sudo systemctl status handycon
 
-Handycon is now fully working 
+sudo reboot  
 
 ___________________________________________________________________________________________________
 
 Next is Asusctl follow everything as described 
  
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+Open Nobara Package Manager
 
-sudo dnf install rust
+Select "asusctl" and "asusctl-rog-gui" and click Apply
 
+Now open Console and type:
 
- git clone https://github.com/flukejones/asusctl.git
+sudo systemctl start asusd
 
+sudo systemctl enable asusd
 
+sudo systemctl status asusd
 
-open terminal inside downloaded folder then
-
-sudo dnf install cmake clang-devel systemd-devel glib2-devel cairo-devel atkmm-devel pangomm-devel gdk-pixbuf2-devel gtk3-devel libappindicator-gtk3
-make
-
-sudo make install
-
+sudo reboot
 __________________________________________________________________________________________________
 
 Now we will disable Zram as its not the best for a 16GB handheld! and enable swapfile 16gb
