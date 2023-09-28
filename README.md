@@ -1,3 +1,7 @@
+________________________________________________________________________________________________________
+his is a "work-in-progress" Guide. All Thanks goes to @ripplingsnake for his great work to make this OS compatible with the Asus Rog Ally.
+________________________________________________________________________________________________________
+
 1.
 
 Please follow this guide to install Nobara steamdeck version on the ROG Ally.
