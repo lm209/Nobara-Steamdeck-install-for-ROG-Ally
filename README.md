@@ -4,7 +4,7 @@ ________________________________________________________________________________
 
 1.
 
-Please follow this guide to install Nobara steamdeck version on the ROG Ally.
+Please follow this Guide to install "Nobara Steam Deck" version on the ROG Ally.
 
 There has been alot of work done on this by none other than Glorious Eggroll the man of GEProton fame.
 
@@ -106,11 +106,11 @@ Cryoutilites from here
 
 curl https://raw.githubusercontent.com/CryoByte33/steam-deck-utilities/main/install.sh | bash -s --
 
-Start Cryoutilities and change all to Recommended, password is gamer as default or what ever you chose. reboot now
+Start Cryoutilities and change all to Recommended, password is what ever you choose by the Installation. Reboot now.
 
-Enjoy your new steamdeck aka ROG ALLY!!!!
+Enjoy your new Steam Deck aka ROG ALLY!!!!
 
-If you add ROG control as non steam game you can open in gamemaode and change your power preference 
+If you add ROG control as Non-Steam Game, you can open it in Gamemode and change your Power-Preference.
 
 
 
