@@ -4,10 +4,6 @@ This is a "work-in-progress" Guide. All Thanks goes to @ripplingsnake for his gr
 
 1.
 
-Please follow this Guide to install "Nobara Steam Deck" version on the ROG Ally.
-
-There has been alot of work done on this by none other than Glorious Eggroll the man of GEProton fame.
-
 Download the Nobara Steam Deck Edition from here https://nobaraproject.org/download-nobara/
 
 Download https://www.balena.io/etcher/ to burn the Nobara image to USB.
@@ -16,7 +12,11 @@ Choose "Erase Partition" and choose "No Swap".
 
 Wait for finishing installation and reboot into OS.
 
-If he found Updates, just updating it.
+Login to your Steam Account 
+
+Go to the Desktop Mode
+
+If he found Updates, just updating it before you Proceed with Step 2.
 
 ________________________________________________________________________________________________________
 
