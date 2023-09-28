@@ -4,18 +4,21 @@ Please follow this guide to install Nobara steamdeck version on the ROG Ally.
 
 There has been alot of work done on this by none other than Glorious Eggroll the man of GEProton fame.
 
+Download the Nobara Steam Deck Edition from here https://nobaraproject.org/download-nobara/
+
 Download https://www.balena.io/etcher/ to burn the Nobara image to USB.
 
-https://nobaraproject.org/download-nobara/# down load Nobara for steam deck
+Choose "Erase Partition" and choose "No Swap".
 
-Tou can chose to dual boot during the install. choose the no swap option.
+Wait for finishing installation and reboot into OS.
 
+If he found Updates, just updating it.
 
-Once installed and updated do the following to enable Handy con and asusctl for fans and power profile options.
-
-______________________________________________________________________________________
+________________________________________________________________________________________________________
 
 2.
+
+Open Console and type:
 
 git clone https://github.com/ShadowBlip/HandyGCCS.git
 
@@ -35,7 +38,7 @@ sudo systemctl status handycon
 
 sudo reboot  
 
-___________________________________________________________________________________________________
+________________________________________________________________________________________________________
 
 3.
  
@@ -52,7 +55,8 @@ sudo systemctl enable asusd
 sudo systemctl status asusd
 
 sudo reboot
-__________________________________________________________________________________________________
+
+________________________________________________________________________________________________________
 
 4.
 
@@ -85,7 +89,8 @@ Add this to the end of the lines thats there,
 /swapfile swap swap defaults 0 0
 
 sudo reboot
-______________________________________________________________________________________
+
+________________________________________________________________________________________________________
 
 5.
 
@@ -101,11 +106,8 @@ Start Cryoutilities and change all to Recommended, password is gamer as default 
 
 Enjoy your new steamdeck aka ROG ALLY!!!!
 
-If you and ROG control as non steam game you can open in gamemaode and change your power preference 
+If you add ROG control as non steam game you can open in gamemaode and change your power preference 
 
-optional install power tools in decky then go here and follow the instarutions for power control and tdp options 
-
-https://github.com/hicder/PowerTools/releases/tag/v2.1
 
 
 
