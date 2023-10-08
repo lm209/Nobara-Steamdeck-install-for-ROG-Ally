@@ -22,25 +22,9 @@ ________________________________________________________________________________
 
 2.
 
-Open Console and type:
+Open Nobara Package Manager and search "HandyGCCS" select it and click Apply.
 
-git clone https://github.com/ShadowBlip/HandyGCCS.git
-
-cd HandyGCCS
-
-sudo python -m pip install build wheel installer
-
-sudo ./build.sh in HandyGCCS folder
-
-sudo ln -s /usr/local/bin/handycon /usr/bin/handycon
-
-sudo systemctl start handycon
-
-sudo systemctl enable handycon
-
-sudo systemctl status handycon
-
-sudo reboot  
+Now reboot  
 
 ________________________________________________________________________________________________________
 
@@ -48,17 +32,9 @@ ________________________________________________________________________________
  
 Open Nobara Package Manager
 
-Select "asusctl" and "asusctl-rog-gui" and click Apply
+Search "asusctl" and "asusctl-rog-gui" select it and click Apply
 
-Now open Console and type:
-
-sudo systemctl start asusd
-
-sudo systemctl enable asusd
-
-sudo systemctl status asusd
-
-sudo reboot
+Now reboot
 
 ________________________________________________________________________________________________________
 
