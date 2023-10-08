@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------------------------------------
-This is a "work-in-progress" Guide. All Thanks goes to @ripplingsnake for his great work to make this OS compatible with the Asus Rog Ally.
+This is a "work-in-progress" Guide. All Thanks goes to @ripplingsnake for his great work to make this OS compatible with the Asus Rog Ally: https://github.com/ripplingsnake/Nobara-SteamOS-For-ROG-Ally/tree/main
 ---------------------------------------------------------------------------------------------------------
 
 1.
